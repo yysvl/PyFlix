@@ -1,5 +1,4 @@
-#Continuous Assessment 1 
-#Student Number:118300721
+
 
 class Movie:
     def __init__(self, title, director, cast, length):
