@@ -1,0 +1,31 @@
+The PyFlix Movie Library
+Design and implement a class Movie, with fields title, director, cast, length, and rating (and you could have other fields for e.g. the category, the video file, the movie poster image, the the release date, etc., but we don't need them in this exercise). Your Movie class should have the following methods: __init__(...), __str__(), and get_info(). The init(...) method requires a title, director, cast list as a string, and length as an integer number of minutes. The rating field is meant for the user's personal rating, and so should be -1 on creation to indicate no rating given. The __str__() method should return a short string containing title and director. The get_info() method should return a longer string containing info on all fields, with the name of each field listed before its content.
+
+Design and implement a class PyFlix, which is essentially a list of movie files (Movie instances). The should offer the following methods (in addition to __init__(...)):
+
+__str__(), which should return a single string containing each movie in the list on a separate line, where each movie is represented by its title, director. The currently selected movie, if any, should be preceded by '-->'.
+
+add_movie(movie), which should add a new movie to the end of the list
+
+get_current(), which should return the currently selected movie
+
+next_movie(), which should change the current selection to the next one
+
+prev_movie(), which should change the current selection to the previous one
+
+reset(), which should reset the curent selection to the list head
+
+rate(), which gets a suitable integer rating from the command line and assigns it to the current movie
+
+info(), which gets a string consisting of the full details of the current movie, including any rating, and prints it to the screen
+
+remove_current(), which should remove the current movie from the list
+
+length(), which should report the number of movies in the library
+
+The class PyFlix must be implemented as a doubly-linked list. It is easiest to implement PyFlix to deal directly with a sequence of DLLNodes (i.e. implement all the required functionality of doubly linked lists directly into the PyFlix class - you don't create a separate standalone DoublyLinkedList).
+
+For this exercise, for invalid input, if we are obliged to return an item, we will return None, and otherwise we will do nothing. If you delete the currently selected movie, make whetever came after it the new current movie; if that goes off the end of the list, reset the current movie to be the head.
+Add the following method to your PyFlix class:
+
+search(word), which moves the current movie pointer to the next movie in the list containing the input word as a substring anywhere in any of its fields; wrap the search round to the start again if you need to, and if no movie matches the input, the current pointer should be pointing to whatver it was pointing to before you started the search. After the search, if you found a movie, print its info, and if you didn't find a match, print "no matching movie";
