@@ -1,4 +1,4 @@
-Implementing a Movie Catalogue using Binary Search Trees
+Implementing a Movie Catalogue using Binary Search Trees(BST)
 PyFlix wants to implement a library of movie files that are available for users to stream. The library is dynamic, and keeps changing, with movies being added and removed frequently. Users will want to search the catalogue to see if particular movies are available. This assignment is to write a Python class to represent the catalogue using a recursively-defined Binary Search Tree.
 
 We will start with a class, Movie, representing a movie's title, date of release, and running time. This class is given in movielibrary.py and you don't need to change it. You should inspect it closely, though, to see what methods are offered. Note: for the required part of this assignment, we will not be able to represent two different movies with the same title -- the first one added wil be the one that is stored, until it is explicitly removed.
